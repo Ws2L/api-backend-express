@@ -1,11 +1,20 @@
 {
   "name": "api-express-backend",
   "version": "1.0.0",
-  "main": "index.js",
-  "scripts": {},
-  "author": "",
+  "description": "API Backend com Express, Prisma e Zod",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js"
+  },
+  "keywords": [
+    "node",
+    "express",
+    "prisma",
+    "zod",
+    "mysql"
+  ],
+  "author": "Weslley Souza",
   "license": "ISC",
-  "description": "",
   "dependencies": {
     "express": "^5.1.0"
   }
