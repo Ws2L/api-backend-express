@@ -24,3 +24,5 @@ git remote add origin _url_do_github_ // vincula meu projeto local ao repositori
 * o que é NPM (Node Package Manager)gerenciador de pacotes do node
 * protocolo http - protocolo que determina as regras das requisições e respostas da web
 * metodos http (GET - obter e pegar dados, POST - enviar e cadastrar dados, PUT - editar dados completos , PATCH - editar parcialmente os dados, DELETE - excluir dados)
+
+* como mudar o formato de importação/exportação de require para import - adicionar no package.json a propriedade type: module
