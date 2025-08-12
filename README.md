@@ -26,3 +26,15 @@ git remote add origin _url_do_github_ // vincula meu projeto local ao repositori
 * metodos http (GET - obter e pegar dados, POST - enviar e cadastrar dados, PUT - editar dados completos , PATCH - editar parcialmente os dados, DELETE - excluir dados)
 
 * como mudar o formato de importação/exportação de require para import - adicionar no package.json a propriedade type: module
+
+--watch (parametro para rodar um js em modo dev, que permite rodar novamente o script quando algum arquivo é alterado)
+
+Sintaxe básica de uma rota da API
+
+app.post('/produto', (req, res) => {
+    res.json({message: 'Criado com sucesso!'})
+})
+
+- método criar ou inserir: post
+- rota ou endereço: /produto
+- tipo de resposta: json
