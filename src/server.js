@@ -1,7 +1,22 @@
 import express from 'express'
+import profileRouter from './routers/profileRouter.js'
+import productRouter from './routers/productRouter.js'
+import supplierRouter from './routers/supplierRouter.js'
+import carRouter from './routers/carRouter.js'
 
 const app = express()
 const port = 3333
+
+app.use(express.json())
+
+app.use('/profile', profileRouter)
+app.use('/product', productRouter)
+app.use('/supplier', supplierRouter)
+app.use('/car', carRouter)
+
+app.listen(port, () => {
+  console.log(`API Rodando em http://localhost:${port}`)
+})
 
 /*app.get('/', (req, res) => {
   console.log(req)
@@ -31,9 +46,10 @@ app.put('/user', (req, res) => {
 app.delete('/user', (req, res) => {
   console.log('Foi feito um DELETE no /user')
   res.json({message: 'Usuario deletado com sucesso'})
-})
-*/
-app.use(express.json())
+})*/
+
+
+/*app.use(express.json())
 
 app.post('/profile', (req, res) => {
   const dados = req.body
@@ -56,6 +72,6 @@ app.delete('/profile', (req, res) => {
   res.json({message: 'Usuario deletado com sucesso'})
 })
 
-app.listen(3333, () => {
+app.listen(3000, () => {
   console.log(`API Rodando em http://localhost:${port}`)
-})
+})*/
