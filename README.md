@@ -40,3 +40,26 @@ app.post('/produto', (req, res) => {
 - método criar ou inserir: post
 - rota ou endereço: /produto
 - tipo de resposta: json
+
+ORM - object, relational, model (relacionamento de objeto do javascript com a base de dados) facilidade de alterar a base de dados e facilidade de escrever os comandos pois ja possui comandos prontos
+
+dependencias do projeto
+dependencias dev sao usadas somente durante o desenvolvimento do projeto
+
+#prisma
+
+- instalação do prisma
+ - npm i prisma -D
+ - npm i @prisma/client
+
+- inicializar o prisma
+ - npx prisma init
+
+- gerar o model do prisma a partir de um banco de dados existente
+ - npx prisma db pull
+
+- gerar o banco de dados a partir de um model de prisma
+ - npx prisma db push
+
+- gerar os arquivos necessarios para usar o prisma client no código
+ - 

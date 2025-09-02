@@ -1,4 +1,9 @@
-export const deleteProfile = (req, res) => {
+export const deleteProfileController = async (req, res) => {
   const id = req.params.id
-  res.json({ message: `Usuario com ID ${id} deletado com sucesso`})
+
+  const result = await remove(+id)
+  res.json({
+    message: `Usuario com ID ${id} deletado com sucesso`,
+    profile: result
+  })
 }

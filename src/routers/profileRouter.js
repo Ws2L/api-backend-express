@@ -1,16 +1,16 @@
 import express from 'express'
-import { createProfile } from '../controllers/profile/createProfileController.js'
+import { createProfileController } from '../controllers/profile/createProfileController.js'
 import { listProfiles } from '../controllers/profile/listProfileController.js'
 import { getProfileById } from '../controllers/profile/getByIdProfileController.js'
 import { editProfile } from '../controllers/profile/editProfileController.js'
-import { deleteProfile } from '../controllers/profile/deleteProfileController.js'
+import { deleteProfileController } from '../controllers/profile/deleteProfileController.js'
 
 const router = express.Router()
 
-router.post('/', createProfile)
+router.post('/', createProfileController)
 router.get('/', listProfiles)
 router.get('/:id', getProfileById)
 router.put('/:id', editProfile)
-router.delete('/:id', deleteProfile)
+router.delete('/:id', deleteProfileController)
 
 export default router
