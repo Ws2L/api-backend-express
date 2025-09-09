@@ -1,4 +1,11 @@
-export const getProfileById = (req, res) => {
+import { getById } from '../../models/profileModel.js'
+
+export const getProfileById = async(req, res) => {
   const id = req.params.id
-  res.json({message: `Usuario com ID ${id} consultado com sucesso`})
+
+  const result = await getById (+id)
+
+  res.json({message: `Usuario com ID ${id} consultado com sucesso`,
+  profile: result
+  })
 }

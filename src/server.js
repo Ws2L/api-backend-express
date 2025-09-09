@@ -4,10 +4,12 @@ import productRouter from './routers/productRouter.js'
 import supplierRouter from './routers/supplierRouter.js'
 import carRouter from './routers/carRouter.js'
 import customerRouter from './routers/customerRouter.js'
+import cors from 'cors'
 
 const app = express()
 const port = 3333
 
+app.use(cors())
 app.use(express.json())
 
 app.use('/profile', profileRouter)
