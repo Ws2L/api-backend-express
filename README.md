@@ -1,5 +1,7 @@
 # Comandos
 
+Liberar o poweshell (Set-ExecutionPolicy RemoteSigned -Scope CurrentUser)
+
 npm init // cria o package.json para iniciar um projeto node
 npm i nome_pacote // instala um pacote específico
 npm install // instala todos os pacotes do package.json
@@ -62,4 +64,14 @@ dependencias dev sao usadas somente durante o desenvolvimento do projeto
  - npx prisma db push
 
 - gerar os arquivos necessarios para usar o prisma client no código
- - 
+ - npx prisma generate
+
+ cors libera o acesso ao servidor da web
+
+ req - passa a url, verifica se mandou json, qual metodo foi enviado, etc
+ req.method - atraves dele se consegue saber o metodo que está sendo usado
+ res - 
+
+ middleware - padrao de projeto do express que organiza um codigo em uma sequencia de funções e cada uma dessas funções tem uma responsbilidade e quando termina essa função ela manda para o proximo middleware
+
+ funçao next - confirma a finalização das obrigações do middleware e passa para o proximo

@@ -5,10 +5,12 @@ import supplierRouter from './routers/supplierRouter.js'
 import carRouter from './routers/carRouter.js'
 import customerRouter from './routers/customerRouter.js'
 import cors from 'cors'
+import { logger } from './middlewares/logger.js'
 
 const app = express()
 const port = 3333
 
+app.use(logger)
 app.use(cors())
 app.use(express.json())
 
